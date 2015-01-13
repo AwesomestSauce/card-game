@@ -46,7 +46,7 @@ $(document).ready(function(){
     });
     $('#addCard').click(function(){
         if(!hand.length){
-            showError('your hand is empty');
+            showError('your hand has the least amount of cards possible');
             return;
         }
         var c = hand.pop();
