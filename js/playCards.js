@@ -15,6 +15,12 @@ $(document).ready(function(){
         for(var i=0;i<hand.length;i++){
             el.append(hand[i].getHTML());
         }
+            var showHand = function(){
+        var el = $('#theirHand')
+        el.html('');
+        for(var i=0;i<hand.length;i++){
+            el.append(hand[i].getHTML());
+        }
     }
     var doShuffle = function(){
         cardDeck.shuffle();
@@ -40,6 +46,7 @@ $(document).ready(function(){
     }
     $('#shuffler').click(doShuffle);
     $('#draw').click(doDrawCard);
+     $('#draw1').click(doDrawCard);
     $('#shuffleDraw').click(function(){
         doShuffle();
         doDrawCard();
